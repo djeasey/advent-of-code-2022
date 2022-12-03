@@ -1,0 +1,2 @@
+import string
+print(sum([(string.ascii_lowercase + string.ascii_uppercase).index(''.join(sorted(set(line[:int(len(line) / 2)]) & set(line[int(len(line) / 2):]), key = line[:int(len(line) / 2)].index))) + 1 for line in [line.strip() for line in open("day3/input.txt", "r").readlines()]]))
