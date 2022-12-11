@@ -2,7 +2,7 @@ f = open("input.txt", "r")
 lines = f.readlines()
 scores = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 score = 0
-lines = [line.replace("\n","") for line in lines]
+lines = [line.replace("\n", "") for line in lines]
 for line in lines:
     rs_size = len(line)
     comp_size = int(rs_size / 2)

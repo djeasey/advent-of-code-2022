@@ -7,6 +7,8 @@ for line in lines:
     first_end = int(assigns[0].split("-")[1])
     second_start = int(assigns[1].split("-")[0])
     second_end = int(assigns[1].split("-")[1])
-    if (first_start <= second_start and second_end <= first_end) or (second_start <= first_start and first_end <= second_end):
+    if (first_start <= second_start and second_end <= first_end) or (
+        second_start <= first_start and first_end <= second_end
+    ):
         count += 1
 print(count)

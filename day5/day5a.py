@@ -1,12 +1,12 @@
 f = open("day5/input.txt", "r")
 lines = f.readlines()
-lines = [line.replace("\n","") for line in lines]
+lines = [line.replace("\n", "") for line in lines]
 stacks = []
 
-for i in range(9): # stacks
+for i in range(9):  # stacks
     stacks.append([])
-    for j in range(8): # lines
-        new_element = lines[7-j][i*4+1]
+    for j in range(8):  # lines
+        new_element = lines[7 - j][i * 4 + 1]
         if new_element != " ":
             stacks[i].append(new_element)
 

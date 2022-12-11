@@ -1,6 +1,6 @@
 f = open("day7/input.txt", "r")
 lines = f.readlines()
-lines = [line.replace("\n","") for line in lines]
+lines = [line.replace("\n", "") for line in lines]
 
 file_list = []
 dir_list = []
