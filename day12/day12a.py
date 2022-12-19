@@ -22,17 +22,29 @@ while shortest_distance_array[end_i][end_j] == -1:
             if shortest_distance_array[i][j] == current_distance:
                 last_letter_order = letter_order.find(lines[i][j])
                 if i > 0:
-                    if letter_order.find(lines[i-1][j]) <= last_letter_order + 1 and shortest_distance_array[i-1][j] == -1:
-                        shortest_distance_array[i-1][j] = current_distance + 1
+                    if (
+                        letter_order.find(lines[i - 1][j]) <= last_letter_order + 1
+                        and shortest_distance_array[i - 1][j] == -1
+                    ):
+                        shortest_distance_array[i - 1][j] = current_distance + 1
                 if i < len(lines) - 1:
-                    if letter_order.find(lines[i+1][j]) <= last_letter_order + 1 and shortest_distance_array[i+1][j] == -1:
-                        shortest_distance_array[i+1][j] = current_distance + 1
+                    if (
+                        letter_order.find(lines[i + 1][j]) <= last_letter_order + 1
+                        and shortest_distance_array[i + 1][j] == -1
+                    ):
+                        shortest_distance_array[i + 1][j] = current_distance + 1
                 if j > 0:
-                    if letter_order.find(lines[i][j-1]) <= last_letter_order + 1 and shortest_distance_array[i][j-1] == -1:
-                        shortest_distance_array[i][j-1] = current_distance + 1
+                    if (
+                        letter_order.find(lines[i][j - 1]) <= last_letter_order + 1
+                        and shortest_distance_array[i][j - 1] == -1
+                    ):
+                        shortest_distance_array[i][j - 1] = current_distance + 1
                 if j < len(lines[0]) - 1:
-                    if letter_order.find(lines[i][j+1]) <= last_letter_order + 1 and shortest_distance_array[i][j+1] == -1:
-                        shortest_distance_array[i][j+1] = current_distance + 1
+                    if (
+                        letter_order.find(lines[i][j + 1]) <= last_letter_order + 1
+                        and shortest_distance_array[i][j + 1] == -1
+                    ):
+                        shortest_distance_array[i][j + 1] = current_distance + 1
     current_distance += 1
 
 print(shortest_distance_array[end_i][end_j])
